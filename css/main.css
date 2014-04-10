@@ -1,0 +1,20 @@
+#example_container {
+	display: none;
+	margin-top: 60px;
+}
+
+.example-section {
+	margin-top: 30px;
+}
+
+h3 {
+	margin-bottom: 15px;
+}
+
+.highlight {
+	margin-top: 5px;
+}
+
+#original_url {
+  width: 600px;
+}

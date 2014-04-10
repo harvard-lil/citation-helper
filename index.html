@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Citation Helper</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Additional styling -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+
+		<div class="row">
+	        <div class="col-md-12">
+			    <h3>The URL of the original page</h3>
+				<form role="form" class="form-inline">
+				  <div class="form-group">
+				    <label class="sr-only" for="original_url">The URL of the original page</label>
+					<input type="text" class="form-control" id="original_url" placeholder="http://example.com">
+				  </div>
+				  <button type="submit" class="btn btn-success">Submit</button>
+				</form>
+	        </div>
+		</div>
+
+	<div id="example_container">
+
+		<div class="row example-section">
+	        <div class="col-md-12">
+			    <h3>A print-based style</h3>
+		
+				<div>
+					The citation style Wikipedia uses. This is a reference. We want to do the same thing for the Web.
+				</div>
+				<div class="highlight">
+<pre><code class="html">The author (the pub year), <span class="title_holder"></span>, archived from the original on <span class="pretty_date_holder"></span>, retrieved <span class="pretty_date_holder"></span></code></pre>
+				</div>
+	        </div>
+		</div>
+
+		<div class="row example-section">
+	        <div class="col-md-12">
+			    <h3>A small addition</h3>
+
+				<div>
+					Leverage the anchor tag by adding two attributes
+				</div>
+				<div class="highlight">
+<pre><code class="html">&lt;a href="<span class="url_holder"></span>" lset="http://perma.cc https://archive.org/web/" datetime="<span class="date_holder"></span>"&gt;
+	<span class="title_holder"></span>
+&lt;/a&gt;
+</code></pre>					
+				</div>
+	        </div>
+		</div>	
+
+		<div class="row example-section">
+	        <div class="col-md-12">
+			    <h3>Simple block approach</h3>
+		
+				<div>
+				  Wrap the things in a fallback block
+				</div>
+				<div class="highlight">
+<pre><code class="html">&lt;fallback lset="http://perma.cc https://archive.org/web/" rel="memento" data-IANArel-datetime="<span class="date_holder"></span>"&gt;
+	&lt;a href="<span class="url_holder"></span>"&gt;
+		<span class="title_holder"></span>
+	&lt;/a&gt;
+&lt;/fallback&gt;</code></pre>					
+				</div>
+	        </div>
+		</div>
+
+
+		<div class="row example-section">
+	        <div class="col-md-12">
+			    <h3>Play on the Link element</h3>
+		
+				<div>
+				  Wrap the things in a fallback block
+				</div>
+				<div class="highlight">
+<pre><code class="html">&lt;someset&gt;
+	&lt;a href="<span class="url_holder"></span>"&gt;
+		HTML 2.0
+	&lt;/a&gt;
+
+	&lt;link href="http://perma.cc" rel="memento" data-IANArel-datetime="<span class="date_holder"></span>"&gt;
+
+	&lt;link href="https://archive.org/web/"; rel="alternate"&gt;
+&lt;/someset&gt;</code></pre>					
+				</div>
+	        </div>
+		</div>
+
+</div> <!-- end of example container -->
+
+	</div> <!-- /container -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/moment.min.js"></script>
+	    <script src="js/main.js"></script>
+  </body>
+</html>
